@@ -1,42 +1,97 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+@charset "utf-8";
+
+/* 全体のスタイル */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* セクションのスタイル */
+.name, .local-initiative, .project-goal, .question-form {
+    max-width: 800px;
+    margin: 20px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* 見出しのスタイル */
+h1, h2 {
+    color: #444;
+    text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* 質問フォームのスタイル */
+.question-form form {
+    display: flex;
+    flex-direction: column;
 }
 
-.card {
-  padding: 2em;
+.question-form label {
+    margin-bottom: 8px;
+    font-weight: bold;
 }
 
-.read-the-docs {
-  color: #888;
+.question-form textarea, .question-form input, .question-form button {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* フォーカス時のスタイル */
+.question-form textarea:focus, .question-form input:focus {
+    border-color: #007BFF;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* ボタンのスタイル */
+.question-form button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.question-form button:hover {
+    background-color: #0056b3;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 600px) {
+    .name, .local-initiative, .project-goal, .question-form {
+        padding: 15px;
+    }
+
+    .question-form textarea, .question-form input, .question-form button {
+        font-size: 14px;
+    }
+}
+
+/* 表のスタイル */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+table, th, td {
+    border: 1px solid black;
+    padding: 5px;
+    text-align: left;
+}
+
+
+form {
+    margin: 20px 0;
+    display: flex;
 }
