@@ -12,7 +12,7 @@ body {
 
 /* セクションのスタイル */
 .name, .local-initiative, .project-goal, .question-form {
-    max-width: 800px;
+    max-width: 100%;
     margin: 20px;
     padding: 20px;
     background: #fff;
